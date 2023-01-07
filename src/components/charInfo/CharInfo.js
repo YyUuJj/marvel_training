@@ -1,4 +1,6 @@
 import { Component } from 'react';
+import PropTypes from "prop-types";
+
 import './charInfo.scss';
 
 import MarvelService from '../../services/MarvelService';
@@ -24,6 +26,7 @@ class CharInfo extends Component {
             this.updateChar();
         }
     }
+
 
     updateChar = () => {
         const {charId} = this.props;
@@ -115,6 +118,10 @@ const View = ({char}) => {
         
         </>
     )
+}
+
+CharInfo.propTypes = {
+    charId: PropTypes.string
 }
 
 export default CharInfo;
